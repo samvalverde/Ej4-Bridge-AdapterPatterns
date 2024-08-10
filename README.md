@@ -1,2 +1,12 @@
 # Ej4-Bridge-AdapterPatterns
 Este es el ejercicio 4 de Diseño de Software.
+
+bromelia es una aplicación que genera icons basados en imágenes existentes de dos proveedores. BromeliaPictInventory es la clase encargada de hablar tanto con el api de pixbay https://pixabay.com/api/docs/ y también con el api de unplash https://unsplash.com/documentation; para ambos casos se utilizan las funcionalides de search photos de ambas api's y así juntar ambos resultados en las top 10 fotos ganadoras según ciertos criterios de evaluación de las carácteristicas e información de las fotos retornadas por cada api. Sin embargo el código en BromeliaPictInventory se ha vuelto muy complicado y hay que estar lideando con las cosas que se pueden hacer en un api u en otro. Por esa razón, se le ha encomendado que implemente un patrón adapter para que sea usado desde BromeliaPictInventory eliminando por completo las diferencias entre las apis. Adicionalmente, ahora se quiere tener varios algoritmos de selección y puntuación de las fotos, para que no sea ya solo el top 10 y la evaluación hardcoded que existe de las fotos resultantes, si no que mas bien, el usuario desde Bromelia pueda seleccionar alguna técnica o tendencia, y así el algoritmo que se aplique sea diferente, aumentando la calidad del resultado. Para ello, se le ha pedido que abstraiga esa funcionalidad que también está en la clase BromeliaPictInventory, en el método, rankPhotosResult(listaFotosUnplash, listaFotosPixBay), para que ahora se puedan utilizar con un patrón bridge desde la misma clase BromeliaPictInventory.
+
+realice la reorganización del nuevo código utilizando el patrón bridge y adapter
+de las apis puede asumir algunas llamadas según la especificación de las apis de search photos de ambas plataformas, más no debe implementarse la llamada, solo saber cuál método del api es y sus parámetros de ser necesario
+debe ser claro la adaptación que se hace de las dos apis en el adapter y el uso de dicha adaptación en la clase BromeliaPictInventory, tanto para la información que se envía como la que se recibe
+debe ser claro la transformación que sufre la función rankPhotosResult que ahora podría ser valorada por K algoritmos, tome en cuenta que ya se hizo la adaptación de las api
+haga el solution en el lenguaje de su preferencia
+cree un folder "naive" para que se vea la estructura del código actual sin aplicar los cambios
+cree un folder "patternized" para que se vea la estructura nueva propuesta del código aplicando los patrones
