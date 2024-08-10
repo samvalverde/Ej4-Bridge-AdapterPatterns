@@ -1,6 +1,6 @@
 // naive/index.js
 
-const BromeliaPictInventory = require('./bromeliaPictInventory');
+const BromeliaPictInventory = require('./BromeliaPictInventory');
 
 const apiKeyPixabay = 'YOUR_PIXABAY_API_KEY';
 const apiKeyUnsplash = 'YOUR_UNSPLASH_API_KEY';
